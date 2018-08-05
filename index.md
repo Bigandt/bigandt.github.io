@@ -3,6 +3,8 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: default
+title: Jeppes ønskeseddel
+
 ---
 
 ## Wok gryde
@@ -12,6 +14,9 @@ layout: default
 
 
 ## Ensfarvet T-shirts
+
+
+## Ensfarvet skjorter
 
 
 ## Adidas Special (spezial)
