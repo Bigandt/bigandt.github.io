@@ -48,7 +48,7 @@ Farver: Hvid, Sort og Blå
 
 F. eks. [Minimum skjorte](https://minimum.dk/jay-long-sleeved-shirt-0299a-p12354) (billede nedenfor)
 
-![Minimum skjorte](https://minimum.dk/image.php?mwidth=400&mheight=5000&filename=./upload/billeder/Produkter/134020299a/000//0.jpg&type=jpg&quality= "Minimum skjorte)
+![Minimum skjorte](https://minimum.dk/image.php?mwidth=400&mheight=5000&filename=./upload/billeder/Produkter/134020299a/000//0.jpg&type=jpg&quality= "Minimum skjorte")
 
 <!--  
 TODO
