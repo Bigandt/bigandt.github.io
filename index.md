@@ -6,6 +6,6 @@
 # https://medium.com/speakforme/tech-tidbits-jekyll-vue-and-working-around-the-delimiters-problem-93e69814ec47
 # https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links
 
-layout: p
+layout: default
 
 ---
