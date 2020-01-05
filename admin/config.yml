@@ -1,4 +1,6 @@
-# config.yml
+---
+permalink: /admin/config.yml
+---
 
 backend:
   name: git-gateway
