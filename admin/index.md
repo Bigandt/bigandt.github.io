@@ -1,6 +1,6 @@
 ---
 layout: none
-permalink: /admin/index.html
+permalink: /admin
 ---
 <!-- admin/index.html -->
 <html>
