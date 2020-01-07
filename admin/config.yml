@@ -10,7 +10,8 @@ collections:
       name: "home"
       file: "_data/home.yml"
       identifier_field: home
-      fields:        - {label: Title, name: title, widget: string, hint: "The Large Text at the top."}
+      fields:        
+        - {label: Title, name: title, widget: string, hint: "The Large Text at the top."}
   - name: "post" # Used in routes, e.g. /admin/collections/blog
     label: "Post" # Used in the UI
     folder: "_posts" # The path to the folder where the documents are stored
