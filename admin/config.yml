@@ -9,5 +9,6 @@ collections:
     - label: "Home Page"
       name: "home"
       file: "_data/home.yml"
+      identifier_field: home
       fields:
         - {label: Title, name: title, widget: string, hint: "The Large Text at the top"}
