@@ -15,9 +15,7 @@ layout: default
       });
     }
   </script>
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+  <h1 class="page-heading">{{ site.data.home.title | default: "Is null" }}</h1>
 
   {{ content }}
 

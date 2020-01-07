@@ -1,8 +1,16 @@
 backend:
-  name: git-gateway
+  name: test-repo # git-gateway
   branch: master # Branch to update (optional; defaults to master)
 media_folder: 'assets/uploads'
 collections:
+  - label: "Pages"
+    name: "home"
+    files:
+    - label: "Home Page"
+      name: "home"
+      file: "_data/home.yml"
+      fields:
+        - {label: Title, name: title, widget: string, hint: "The Large Text at the top"}
   - name: 'blog'
     label: 'Blog'
     folder: '_posts/'
