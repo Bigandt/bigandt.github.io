@@ -11,8 +11,3 @@ collections:
       file: "_data/home.yml"
       fields:
         - {label: Title, name: title, widget: string, hint: "The Large Text at the top"}
-  - name: 'blog'
-    label: 'Blog'
-    folder: '_posts/'
-    fields:
-      - { name: Title }
