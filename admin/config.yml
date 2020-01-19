@@ -5,10 +5,10 @@ media_folder: 'assets/uploads'
 site_url: https://jeppebigandt.dk
 publish_mode: editorial_workflow
 collections:
-  - label: "Pages"
+  - label: "Sider"
     name: "home"
     files:
-    - label: "Home Page"
+    - label: "Forside"
       name: "home"
       file: "_data/home.yml"
       identifier_field: home
@@ -21,14 +21,14 @@ collections:
         - {label: Sektion 3 title, name: section-3, widget: string, hint: ""}
         - {label: Landing Overskrift 1, name: heading-1, widget: string, hint: ""}
         - {label: Landing Overskrift 2, name: heading-2, widget: string, hint: ""}
-        - {label: Sektion 1 Tekst, name: section-1-body, widget: markdown, hint: ""}
+        - {label: Sektion 1 Tekst, name: section-1-body, widget: text, hint: ""}
         - {label: Sektion 2 Overskrift, name: section-2-heading, widget: string, hint: ""}
-        - {label: Sektion 2 Tekst, name: section-2-body, widget: markdown, hint: ""}
+        - {label: Sektion 2 Tekst, name: section-2-body, widget: text, hint: ""}
         - {label: Sektion 3 Overskrift, name: section-3-heading, widget: string, hint: ""}
-        - {label: Sektion 3 Tekst, name: section-3-body, widget: markdown, hint: ""}
+        - {label: Sektion 3 Tekst, name: section-3-body, widget: text, hint: ""}
         - {label: Sektion 4 Overskrift 1, name: section-4-heading-1, widget: string, hint: ""}
-        - {label: Sektion 4 Tekst 1, name: section-4-body-1, widget: markdown, hint: ""}
+        - {label: Sektion 4 Tekst 1, name: section-4-body-1, widget: text, hint: ""}
         - {label: Sektion 4 Overskrift 2, name: section-4-heading-2, widget: string, hint: ""}
-        - {label: Sektion 4 Tekst 2, name: section-4-body-2, widget: markdown, hint: ""}
+        - {label: Sektion 4 Tekst 2, name: section-4-body-2, widget: text, hint: ""}
         - {label: Sektion 4 Overskrift 3, name: section-4-heading-3, widget: string, hint: ""}
-        - {label: Sektion 4 Tekst 3, name: section-4-body-3, widget: markdown, hint: ""}
+        - {label: Sektion 4 Tekst 3, name: section-4-body-3, widget: text, hint: ""}
