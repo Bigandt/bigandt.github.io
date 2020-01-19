@@ -21,9 +21,7 @@
   <!-- Custom styles for this template -->
   <link href="css/grayscale.css" rel="stylesheet">
 
-</head>
-
-<body id="page-top">
+  <!-- CMS -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
     if (window.netlifyIdentity) {
@@ -36,6 +34,10 @@
       });
     }
   </script>
+
+</head>
+
+<body id="page-top">
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
@@ -49,14 +51,14 @@
             <a class="nav-link js-scroll-trigger" href="#program"><strong>{{site.data.home.section-1}}</strong></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#projects"><strong>{{site.data.home.section-2}}</strong></a>
+            <a class="nav-link js-scroll-trigger" href="#whenwhere"><strong>{{site.data.home.section-2}}</strong></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#signup"><strong>{{site.data.home.section-3}}</strong></a>
+            <a class="nav-link js-scroll-trigger" href="#write"><strong>{{site.data.home.section-3}}</strong></a>
           </li>
           <!--
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#signup">Skriv en hilsen</a>
+            <a class="nav-link js-scroll-trigger" href="#wall">Skriv en hilsen</a>
           </li>
           -->
         </ul>
@@ -64,7 +66,7 @@
     </div>
   </nav>
 
-  <!-- Header #AFD2FC -->
+  <!-- Header -->
   <header class="masthead" style="background-color: #AFD2FC!important;">
     <div class="container d-flex h-100 align-items-center">
       <div class="mx-auto text-center">
@@ -74,36 +76,28 @@
     </div>
   </header>
 
-  <!-- About Section -->
+  <!-- Section 1 -->
   <section id="program" class="about-section text-center">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <p class="text-white-50">Programmet indtil videre er</p>
-          <h2 class="text-white mb-4">kirke ceremoni</h2>
-          <h2 class="text-white mb-4">Velkomst drink og canape på Sankt Annæ Atrium</h2>
-          <h2 class="text-white mb-4">Forret / Hovedret</h2>
-          <h2 class="text-white mb-4">Kaffe / Kage & Avec</h2>
-          <h2 class="text-white mb-4">Brudevals</h2>
-          <h2 class="text-white mb-4">Drinks</h2>
+          <p class="text-white-50">{{site.data.home.section-1-body}}</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
+  <!-- Section 2 -->
   <section id="projects" class="projects-section bg-light">
     <div class="container">
-
-      <!-- Featured Project Row -->
       <div class="row align-items-center no-gutters mb-4 mb-lg-5">
         <div class="col-xl-8 col-lg-7">
           <img class="img-fluid mb-3 mb-lg-0" src="assets/uploads/sankt_annae_blomster.jpg" alt="">
         </div>
         <div class="col-xl-4 col-lg-5">
           <div class="featured-text text-center text-lg-left">
-            <h4>Hvor og hvornår</h4>
-            <p class="text-black-50 mb-0">Det bliver holdt på bla. bla. bla....</p>
+            <h4>{{site.data.home.section-2-heading}}</h4>
+            <p class="text-black-50 mb-0">{{site.data.home.section-2-body}}</p>
           </div>
         </div>
       </div>
@@ -117,15 +111,15 @@
     </div>
   </section>
 
-  <!-- Signup Section -->
-  <section id="signup" class="signup-section">
+  <!-- Section 3-->
+  <section id="write" class="write-section">
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-lg-8 mx-auto text-center">
 
           <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-          <h2 class="text-white mb-5">Skriv til os</h2>
-          <p class="text-white mb-5">Har du ønsker om maden/allergier eller anden information ... Så skriv til på telefon, email eller her på siden</p>
+          <h2 class="text-white mb-5">{{site.data.home.section-3-heading}}</h2>
+          <p class="text-white mb-5">{{site.data.home.section-3-body}}</p>
 
           <!-- TODO INSERT CONTACT FORM -->
           <form id="contact-form" class="form-inline d-flex">
@@ -145,7 +139,7 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Section 4-->
   <section class="contact-section bg-black">
     <div class="container">
 
@@ -155,9 +149,9 @@
           <div class="card py-4 h-100">
             <div class="card-body text-center">
               <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-              <h4 class="text-uppercase m-0">Adresse</h4>
+              <h4 class="text-uppercase m-0">{{site.data.home.section-4-heading-1}}</h4>
               <hr class="my-4">
-              <div class="small text-black-50">Oscar Pettifords Vej 9 st. tv. <br> 2450 KBH SV</div>
+              <div class="small text-black-50">{{site.data.home.section-4-body-1}}</div>
             </div>
           </div>
         </div>
@@ -166,10 +160,10 @@
           <div class="card py-4 h-100">
             <div class="card-body text-center">
               <i class="fas fa-envelope text-primary mb-2"></i>
-              <h4 class="text-uppercase m-0">Email</h4>
+              <h4 class="text-uppercase m-0">{{site.data.home.section-4-heading-2}}</h4>
               <hr class="my-4">
               <div class="small text-black-50">
-                <a href="#">nadjaogjeppe@gmail.com</a>
+                <a href="#">{{site.data.home.section-4-body-2}}</a>
               </div>
             </div>
           </div>
@@ -179,9 +173,9 @@
           <div class="card py-4 h-100">
             <div class="card-body text-center">
               <i class="fas fa-mobile-alt text-primary mb-2"></i>
-              <h4 class="text-uppercase m-0">Telefon</h4>
+              <h4 class="text-uppercase m-0">{{site.data.home.section-4-heading-3}}</h4>
               <hr class="my-4">
-              <div class="small text-black-50">30 52 60 85 <br> 30 52 60 85</div>
+              <div class="small text-black-50">{{site.data.home.section-4-body-3}}</div>
             </div>
           </div>
         </div>
