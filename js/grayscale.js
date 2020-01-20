@@ -42,9 +42,6 @@
   $("#contact-form").submit(function(e) {
     e.preventDefault();
     var $form = $(this);
-    console.log($form);
-    console.log($form.serialize());
-    console.log($form.attr("action"));
     $.post($form.attr("action"), $form.serialize()).then(function() {
       alert("Thank you!");
     });
