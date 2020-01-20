@@ -77,7 +77,7 @@
   </header>
 
   <!-- Section 1 -->
-  <section id="program" class="about-section text-center">
+  <section id="program" class="program-section text-center">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
@@ -127,16 +127,15 @@
           <h2 class="text-white mb-5">{{site.data.home.section-3-heading}}</h2>
           <p class="text-white mb-5">{{site.data.home.section-3-body}}</p>
 
-          <!-- TODO INSERT CONTACT FORM -->
-          <form id="contact-form" class="form-inline d-flex">
+          <form id="contact-form" class="form-inline d-flex" action="/">
             <div class="container">
               <div class="row justify-content-between">
-                <input type="text" class="form-control col-sm-5 mb-3" id="inputName" placeholder="Navn...">
+                <input type="text" class="form-control col-sm-5 mb-3" id="inputName" name="name" placeholder="Navn...">
 
-                <input type="email" class="form-control col-sm-6 mb-3 mb-sm-3" id="inputEmail" placeholder="Email adresse...">
+                <input type="email" class="form-control col-sm-6 mb-3 mb-sm-3" id="inputEmail" name="email" placeholder="Email adresse...">
               </div>
             </div>
-            <textarea type="text" class="form-control col-sm-12 mb-3 mb-sm-3" id="inputMessage" placeholder="Besked..." style="resize: none; height: 8em"></textarea>
+            <textarea type="text" class="form-control col-sm-12 mb-3 mb-sm-3" id="inputMessage" name="message" placeholder="Besked..." style="resize: none; height: 8em"></textarea>
 
             <button type="submit" class="btn btn-primary mx-auto flex-fill ml-5 mr-5">Send</button>
           </form>
@@ -157,7 +156,7 @@
               <i class="fas fa-map-marked-alt text-primary mb-2"></i>
               <h4 class="text-uppercase m-0">{{site.data.home.section-4-heading-1}}</h4>
               <hr class="my-4">
-              <div class="small text-black-50">{{site.data.home.section-4-body-1}}</div>
+              <div class="small text-black-50">Oscar Pettifords Vej 9 st. tv.<br>2450 KBH SV</div>
             </div>
           </div>
         </div>
@@ -181,7 +180,7 @@
               <i class="fas fa-mobile-alt text-primary mb-2"></i>
               <h4 class="text-uppercase m-0">{{site.data.home.section-4-heading-3}}</h4>
               <hr class="my-4">
-              <div class="small text-black-50">{{site.data.home.section-4-body-3}}</div>
+              <div class="small text-black-50">30 52 60 85<br>28 55 14 93</div>
             </div>
           </div>
         </div>

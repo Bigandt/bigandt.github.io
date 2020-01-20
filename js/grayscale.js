@@ -41,12 +41,12 @@
 
   $("#contact-form").submit(function(e) {
     e.preventDefault();
-
-  
-  // FORM POST TODO JAB
-  var $form = $(this);
+    var $form = $(this);
+    console.log($form);
+    console.log($form.serialize());
+    console.log($form.attr("action"));
     $.post($form.attr("action"), $form.serialize()).then(function() {
-      alert("Thank you!"); // TOO JEAB
+      alert("Thank you!");
     });
   });
 

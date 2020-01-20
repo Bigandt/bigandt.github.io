@@ -169,12 +169,13 @@
   background-color: #467370 !important;
 }
 
-.about-section {
-  padding-top: 3rem;
+.program-section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   background: linear-gradient(to top, #c9ab74 100%, rgba(25, 25, 25, 0.9) 75%, rgba(25, 25, 25, 0.9) 75%);
 }
 
-.about-section p {
+.program-section p {
   margin-bottom: 1rem;
 }
 
