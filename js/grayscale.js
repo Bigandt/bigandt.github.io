@@ -42,9 +42,21 @@
   $("#contact-form").submit(function(e) {
     e.preventDefault();
     var $form = $(this);
-    $.post($form.attr("action"), $form.serialize()).then(function() {
-      alert("Thank you!");
+    
+    $.post($form.attr("action"), $form.serialize()).done(function() {
+      $(".alert-success").css({
+        'width': ($(".sendBtn").outerWidth() + 'px')
+      });
+      $('.alert-success').show()
+      $('.alert-success').delay(2000).slideUp(2000);
+    }).fail(function() {
+      $(".alert-danger").css({
+        'width': ($(".sendBtn").outerWidth() + 'px')
+      });
+      $('.alert-danger').show()
+      $('.alert-danger').delay(2000).slideUp(2000);
     });
+    
   });
 
 })(jQuery); // End of use strict

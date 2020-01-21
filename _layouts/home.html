@@ -127,7 +127,7 @@
           <h2 class="text-white mb-5">{{site.data.home.section-3-heading}}</h2>
           <p class="text-white mb-5">{{site.data.home.section-3-body}}</p>
 
-          <form id="contact-form" class="form-inline d-flex" action="/" data-netlify="true">
+          <form id="contact-form" class="form-inline d-flex" action="/" data-netlify="true" name="contact-form">
             <div class="container">
               <div class="row justify-content-between">
                 <input type="text" class="form-control col-sm-5 mb-3" id="inputName" name="name" placeholder="Navn...">
@@ -137,8 +137,14 @@
             </div>
             <textarea type="text" class="form-control col-sm-12 mb-3 mb-sm-3" id="inputMessage" name="message" placeholder="Besked..." style="resize: none; height: 8em"></textarea>
 
-            <button type="submit" class="btn btn-primary mx-auto flex-fill ml-5 mr-5">Send</button>
+            <button type="submit" class="btn btn-primary mx-auto flex-fill sendBtn">Send</button>
           </form>
+          <div class="alert alert-success mx-auto flex-fill" role="alert" style="display: none; position: absolute;">
+            Sendt!
+          </div>
+          <div class="alert alert-danger mx-auto flex-fill" role="alert" style="display: none; position: absolute;">
+            Der skete en fejl
+          </div>
         </div>
       </div>
     </div>
