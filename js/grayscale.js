@@ -48,6 +48,7 @@
         'width': ($(".sendBtn").outerWidth() + 'px')
       });
       $('.alert-success').show()
+      $("#contact-form")[0].reset()
       $('.alert-success').delay(2000).slideUp(2000);
     }).fail(function() {
       $(".alert-danger").css({
