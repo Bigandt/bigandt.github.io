@@ -91,19 +91,6 @@
   }
 }
 
-.masthead {
-  position: relative;
-  width: 100%;
-  height: auto;
-  min-height: 35rem;
-  padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 60%, rgba(22, 22, 22, 0.7) 100%, #161616 100%), url("../assets/uploads/top_billede.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
-}
-
 .masthead h1 {
   font-family: 'Varela Round';
   font-size: 2.5rem;

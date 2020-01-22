@@ -9,7 +9,20 @@
   <meta name="author" content="">
 
   <title>{{ site.data.home.title | default: "Nadja & Jeppe bryllup" }}</title>
-
+  <style type="text/css">
+    .masthead {
+      position: relative;
+      width: 100%;
+      height: auto;
+      min-height: 35rem;
+      padding: 15rem 0;
+      background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 60%, rgba(22, 22, 22, 0.7) 100%, #161616 100%), url("../assets/uploads/top_billede.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-size: cover;
+    }
+  </style>
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -51,16 +64,14 @@
             <a class="nav-link js-scroll-trigger" href="#program"><strong>{{site.data.home.section-1}}</strong></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#whenwhere"><strong>{{site.data.home.section-2}}</strong></a>
+            <a class="nav-link js-scroll-trigger" href="#hvoroghvornaar"><strong>{{site.data.home.section-2}}</strong></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#write"><strong>{{site.data.home.section-3}}</strong></a>
+            <a class="nav-link js-scroll-trigger" href="#contact"><strong>{{site.data.home.section-3}}</strong></a>
           </li>
-          <!--
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#wall">Skriv en hilsen</a>
+            <a class="nav-link js-scroll-trigger" href="/vaeg">Skriv en hilsen</a>
           </li>
-          -->
         </ul>
       </div>
     </div>
@@ -94,7 +105,7 @@
   </section>
 
   <!-- Section 2 -->
-  <section id="projects" class="projects-section bg-light">
+  <section id="hvoroghvornaar" class="projects-section bg-light">
     <div class="container">
       <div class="row align-items-center no-gutters mb-4 mb-lg-5">
         <div class="col-xl-8 col-lg-7">
@@ -118,7 +129,7 @@
   </section>
 
   <!-- Section 3-->
-  <section id="write" class="write-section">
+  <section id="contact" class="write-section">
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-lg-8 mx-auto text-center">

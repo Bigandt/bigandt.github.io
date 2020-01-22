@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ site.data.home.title | default: "Nadja & Jeppe bryllup" }}</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <style type="text/css">
+      body { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAxMC8yOS8xMiKqq3kAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzVxteM2AAABHklEQVRIib2Vyw6EIAxFW5idr///Qx9sfG3pLEyJ3tAwi5EmBqRo7vHawiEEERHS6x7MTMxMVv6+z3tPMUYSkfTM/R0fEaG2bbMv+Gc4nZzn+dN4HAcREa3r+hi3bcuu68jLskhVIlW073tWaYlQ9+F9IpqmSfq+fwskhdO/AwmUTJXrOuaRQNeRkOd5lq7rXmS5InmERKoER/QMvUAPlZDHcZRhGN4CSeGY+aHMqgcks5RrHv/eeh455x5KrMq2yHQdibDO6ncG/KZWL7M8xDyS1/MIO0NJqdULLS81X6/X6aR0nqBSJcPeZnlZrzN477NKURn2Nus8sjzmEII0TfMiyxUuxphVWjpJkbx0btUnshRihVv70Bv8ItXq6Asoi/ZiCbU6YgAAAABJRU5ErkJggg==);}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form method="POST" action="https://api.staticman.net/v3/entry/github/Bigandt/bigandt.github.io/master">
+                  <input name="options[redirect]" type="hidden" value="https://jeppebigandt.dk">
+                  <!-- e.g. "2016-01-02-this-is-a-post" -->
+                  <input name="options[slug]" type="hidden" value="{{ page.slug }}">
+                  <label><input name="fields[name]" type="text">Name</label>
+                  <label><textarea name="fields[message]"></textarea>Message</label>
+                  <button type="submit">Send!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                {% assign comments = site.data.comments | sort %}
+
+                {% for comment in comments reversed %}
+                  {% assign commentData = comment[1] %}
+                    <div>
+                      {{ commentData.message }}</br>
+                      From: {{ commentData.name }}</br>
+                      {{ commentData.date | date_to_long_string }}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
