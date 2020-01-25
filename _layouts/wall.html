@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>{{ site.data.home.title | default: "Nadja & Jeppe bryllup" }}</title>
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
@@ -8,37 +10,39 @@
     <style type="text/css">
       body { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAxMC8yOS8xMiKqq3kAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzVxteM2AAABHklEQVRIib2Vyw6EIAxFW5idr///Qx9sfG3pLEyJ3tAwi5EmBqRo7vHawiEEERHS6x7MTMxMVv6+z3tPMUYSkfTM/R0fEaG2bbMv+Gc4nZzn+dN4HAcREa3r+hi3bcuu68jLskhVIlW073tWaYlQ9+F9IpqmSfq+fwskhdO/AwmUTJXrOuaRQNeRkOd5lq7rXmS5InmERKoER/QMvUAPlZDHcZRhGN4CSeGY+aHMqgcks5RrHv/eeh455x5KrMq2yHQdibDO6ncG/KZWL7M8xDyS1/MIO0NJqdULLS81X6/X6aR0nqBSJcPeZnlZrzN477NKURn2Nus8sjzmEII0TfMiyxUuxphVWjpJkbx0btUnshRihVv70Bv8ItXq6Asoi/ZiCbU6YgAAAABJRU5ErkJggg==);}
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <form method="POST" action="https://api.staticman.net/v2/entry/Bigandt/bigandt.github.io/master/master">
-                  <input name="options[redirect]" type="hidden" value="https://jeppebigandt.dk">
-                  <!-- e.g. "2016-01-02-this-is-a-post" -->
-                  <input name="options[slug]" type="hidden" value="vaeg">
-                  <label><input name="fields[name]" type="text">Name</label>
-                  <label><textarea name="fields[message]"></textarea>Message</label>
-                  <button type="submit">Send!</button>
-                </form>
-            </div>
-        </div>
+      <div class="row">
+          <div class="col-sm-12" style="margin-top: 2em;">
+            <div id="remark42"></div>
+          </div>
+      </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                {% assign comments = site.data.comments | sort %}
 
-                {% for comment in comments reversed %}
-                  {% assign commentData = comment[1] %}
-                    <div>
-                      {{ commentData.message }}</br>
-                      From: {{ commentData.name }}</br>
-                      {{ commentData.date | date_to_long_string }}
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-  </body>
+  <script>
+    var remark_config = {
+        host: 'http://104.248.34.3:8080',
+        site_id: 'nadjaogjeppe',
+        components: ['embed'], 
+        url: 'http://jeppebigandt.dk/vaeg',
+        max_shown_comments: 30,
+        theme: 'light',
+        page_title: '{{ site.data.home.title | default: "Nadja & Jeppe bryllup" }}'
+      };
+
+    (function(c) {
+      for(var i = 0; i < c.length; i++){
+        var d = document, s = d.createElement('script');
+        s.src = remark_config.host + '/web/' +c[i] +'.js';
+        s.defer = true;
+        (d.head || d.body).appendChild(s);
+      }
+    })(remark_config.components || ['embed']);
+  </script>
+
+  <noscript>
+    Please enable JavaScript to view the comments.
+  </noscript>
+</body>
 </html>
