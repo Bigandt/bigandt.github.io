@@ -33,21 +33,6 @@
 
   <!-- Custom styles for this template -->
   <link href="css/grayscale.css" rel="stylesheet">
-
-  <!-- CMS -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-  </script>
-
 </head>
 
 <body id="page-top">
@@ -69,9 +54,6 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact"><strong>{{site.data.home.section-3}}</strong></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/vaeg"><strong>Skriv en hilsen</strong></a>
-          </li>
         </ul>
       </div>
     </div>
@@ -88,17 +70,18 @@
   </header>
 
   <!-- Section 1 -->
-  <section id="program" class="program-section text-center">
+  <section id="program" class="program-section text-left">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <p class="text-white-50">Programmet er</p>
-          <h2 class="text-white mb-4">kirke ceremoni</h2>
-          <h2 class="text-white mb-4">Velkomst drink og canape på Sankt Annæ Atrium</h2>
-          <h2 class="text-white mb-4">Forret / Hovedret</h2>
-          <h2 class="text-white mb-4">Kaffe / Kage & Avec</h2>
-          <h2 class="text-white mb-4">Brudevals</h2>
-          <h2 class="text-white mb-4">Drinks</h2>
+          <p class="text-white-50">Programmet</p>
+          <h2 class="text-white mb-4">Kl. 15:00 - Vielse i Garnisonskirken</h2>
+          <h2 class="text-white mb-4">Kl. 15:30 - Fællesbilleder foran kirken</h2>
+          <h2 class="text-white mb-4">Kl. 16:00 - Velkomstdrink og Canape på Hotel Sankt Annæ</h2>
+          <h2 class="text-white mb-4">Kl. 18:00 - Forret / Hovedret</h2>
+          <h2 class="text-white mb-4">kl. 20:00 - Kaffe / Kage & Avec</h2>
+          <h2 class="text-white mb-4">kl. 21:00 - Brudevals & Drinks</h2>
+          <h2 class="text-white mb-4">Kl. 24:00 - Festen slutter</h2>
         </div>
       </div>
     </div>
@@ -112,19 +95,18 @@
           <img class="img-fluid mb-3 mb-lg-0" src="assets/uploads/sankt_annae_blomster.jpg" alt="">
         </div>
         <div class="col-xl-4 col-lg-5">
-          <div class="featured-text text-center text-lg-left">
+          <div class="featured-text text-center text-left">
             <h4>{{site.data.home.section-2-heading}}</h4>
-            <p class="text-black-50 mb-0">{{site.data.home.section-2-body}}</p>
+            <p class="text-black-50 mb-0 text-left">Vielsen finder sted i Garnisonskirken, Sankt Annæ Plads 4 1250 København K</p>
+            <br>
+            <p class="text-black-50 mb-0 text-left">Efterfulgt af fest på Hotel Sankt Annæ, Sankt Annæ Plads 18 – 20 1250 København K</p>
           </div>
         </div>
       </div>
     </div>
 
     <div class="container">
-      <div class="row d-flex justify-content-center justify-content-md-around">
-        <iframe class="cols-5 mb-5" width="300" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=Gr%C3%B8ndals%20kirken&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-        <iframe class="cols-5" width="300" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=sankt%20ann%C3%A6%20atrium&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-      </div>
+      <div id="map" style="height: 20em"></div>
     </div>
   </section>
 
@@ -136,7 +118,7 @@
 
           <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
           <h2 class="text-white mb-5">{{site.data.home.section-3-heading}}</h2>
-          <p class="text-white mb-5">{{site.data.home.section-3-body}}</p>
+          <p class="text-white mb-5">Svar udbedes senest 1. maj.<br> Har du allergier eller andre madpræferencer bedes du skrive dem i dit svar.</p>
 
           <form id="contact-form" class="form-inline d-flex" action="/" data-netlify="true" name="contact-form">
             <div class="container">
@@ -220,6 +202,41 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/grayscale.js"></script>
+
+  <!-- Maps -->
+  <script>
+    function initMap() {
+        var kirke = new google.maps.LatLng(55.681948, 12.589221);
+        var locations = [
+          ['<b>Garnisonskirken</b><br>Sankt Annæ Plads 4<br>1250 København K', 55.681948, 12.589221, 1],
+          ['<b>Hotel Sankt Annæ</b><br>Sankt Annæ Plads 18 – 20<br>1250 København K', 55.681269, 12.591733, 2]
+        ];
+
+        var mapCanvas = document.getElementById('map');
+        var mapOptions = {
+            center: kirke,
+            zoom: 16,
+            panControl: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+        var infowindow = new google.maps.InfoWindow();
+        for (i = 0; i < locations.length; i++) {  
+          marker = new google.maps.Marker({
+            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+            map: map
+          });
+
+          google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function() {
+              infowindow.setContent(locations[i][0]);
+              infowindow.open(map, marker);
+            }
+          })(marker, i));
+        }
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiqEb0-FH2b-hretE_ia9nRLa06DlQgoI&callback=initMap" async defer></script>
 
 </body>
 
