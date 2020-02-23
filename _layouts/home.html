@@ -52,6 +52,9 @@
             <a class="nav-link js-scroll-trigger" href="#hvoroghvornaar"><strong>{{site.data.home.section-2}}</strong></a>
           </li>
           <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#oensker"><strong>Ønsker</strong></a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact"><strong>{{site.data.home.section-3}}</strong></a>
           </li>
         </ul>
@@ -74,32 +77,44 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <p class="text-white-50">Programmet</p>
-          <h2 class="text-white mb-4">Kl. 15:00 - Vielse i Garnisonskirken</h2>
-          <h2 class="text-white mb-4">Kl. 15:30 - Fællesbilleder foran kirken</h2>
-          <h2 class="text-white mb-4">Kl. 16:00 - Velkomstdrink og Canape på Hotel Sankt Annæ</h2>
-          <h2 class="text-white mb-4">Kl. 18:00 - Forret / Hovedret</h2>
-          <h2 class="text-white mb-4">kl. 20:00 - Kaffe / Kage & Avec</h2>
-          <h2 class="text-white mb-4">kl. 21:00 - Brudevals & Drinks</h2>
-          <h2 class="text-white mb-4">Kl. 24:00 - Festen slutter</h2>
+          <h6 class="text-white mb-4"><b>Programmet</b></h6>
+          <h6 class="text-white mb-4">Kl. 15:00 - Vielse i Garnisonskirken</h6>
+          <h6 class="text-white mb-4">Kl. 15:30 - Fællesbilleder foran kirken</h6>
+          <h6 class="text-white mb-4">Kl. 16:00 - Velkomstdrink og Canape på Hotel Sankt Annæ</h6>
+          <h6 class="text-white mb-4">Kl. 18:00 - Forret / Hovedret</h6>
+          <h6 class="text-white mb-4">kl. 20:00 - Kaffe / Kage & Avec</h6>
+          <h6 class="text-white mb-4">kl. 21:00 - Brudevals & Drinks</h6>
+          <h6 class="text-white mb-4">Kl. 24:00 - Festen slutter</h6>
+          <br>
+          <p class="text-white mb-4">Har du ønsker om at holde tale bedes du koordinere med toastmaster. Kontaktoplysninger står i bunden af siden.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 2 -->
+  <!-- Section 2   class="img-fluid mb-3 mb-lg-0"-->
+
+  <div class="container-fluid no-padding">
+    <div class="row" style="width: 100%; margin: 0">
+      <div class="col-12 no-padding">
+        <img src="assets/uploads/sankt_annae_blomster.jpg" alt="" class="img-responsive fit-image">
+      </div>
+    </div>
+  </div>
   <section id="hvoroghvornaar" class="projects-section bg-light">
-    <div class="container">
+    <div class="container" style="margin-bottom: 3em">
       <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-        <div class="col-xl-8 col-lg-7">
-          <img class="img-fluid mb-3 mb-lg-0" src="assets/uploads/sankt_annae_blomster.jpg" alt="">
-        </div>
-        <div class="col-xl-4 col-lg-5">
-          <div class="featured-text text-center text-left">
+        <div class="col-12">
+          <div class="text-center col-12">
             <h4>{{site.data.home.section-2-heading}}</h4>
-            <p class="text-black-50 mb-0 text-left">Vielsen finder sted i Garnisonskirken, Sankt Annæ Plads 4 1250 København K</p>
-            <br>
-            <p class="text-black-50 mb-0 text-left">Efterfulgt af fest på Hotel Sankt Annæ, Sankt Annæ Plads 18 – 20 1250 København K</p>
+            <div class="row" style="margin-top: 2em">
+              <div class="col-6">
+                  <p class="text-black-50 mb-0 text-center"><b>Vielsen</b><br>Garnisonskirken kl. 15:00<br>Sankt Annæ Plads 4<br>1250 København K</p>
+              </div>
+              <div class="col-6">
+                  <p class="text-black-50 mb-0 text-center"><b>Festen</b><br>Hotel Sankt Annæ kl. 16:00<br>Sankt Annæ Plads 18 – 20<br>1250 København K</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -110,7 +125,21 @@
     </div>
   </section>
 
-  <!-- Section 3-->
+  <!-- Section 3 -->
+  <section id="oensker" class="program-section text-left">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h6 class="text-white mb-4"><b>Gaveønkser</b></h6>
+          <h6 class="text-white mb-2">Penge</h6>
+          <h6 class="text-white mb-2">$$$</h6>
+          <br>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4 -->
   <section id="contact" class="write-section">
     <div class="container">
       <div class="row">
@@ -143,43 +172,29 @@
     </div>
   </section>
 
-  <!-- Section 4-->
+  <!-- Section 5-->
   <section class="contact-section bg-black">
     <div class="container">
 
       <div class="row">
-
-        <div class="col-md-4 mb-3 mb-md-0">
+        <div class="col-md-6 mb-3 mb-md-0">
           <div class="card py-4 h-100">
             <div class="card-body text-center">
-              <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-              <h4 class="text-uppercase m-0">{{site.data.home.section-4-heading-1}}</h4>
+              <i class="fas fa-glass-martini-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Toastmaster</h4>
               <hr class="my-4">
-              <div class="small text-black-50">Oscar Pettifords Vej 9 st. tv.<br>2450 KBH SV</div>
+               <div class="small text-black-50">Morten Stampe<br>60 13 18 35<br>mortenstampe@gmail.com</div>
             </div>
           </div>
         </div>
 
-        <div class="col-md-4 mb-3 mb-md-0">
+        <div class="col-md-6 mb-3 mb-md-0">
           <div class="card py-4 h-100">
             <div class="card-body text-center">
               <i class="fas fa-envelope text-primary mb-2"></i>
-              <h4 class="text-uppercase m-0">{{site.data.home.section-4-heading-2}}</h4>
+              <h4 class="text-uppercase m-0">Værter</h4>
               <hr class="my-4">
-              <div class="small text-black-50">
-                <a href="#">{{site.data.home.section-4-body-2}}</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-3 mb-md-0">
-          <div class="card py-4 h-100">
-            <div class="card-body text-center">
-              <i class="fas fa-mobile-alt text-primary mb-2"></i>
-              <h4 class="text-uppercase m-0">{{site.data.home.section-4-heading-3}}</h4>
-              <hr class="my-4">
-              <div class="small text-black-50">30 52 60 85<br>28 55 14 93</div>
+                <div class="small text-black-50">Nadja&Jeppe<br>28 55 14 93<br>nadjaogjeppe@gmail.com</div>
             </div>
           </div>
         </div>

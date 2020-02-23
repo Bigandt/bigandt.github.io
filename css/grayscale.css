@@ -37,6 +37,16 @@
   background-color: transparent;
 }
 
+.no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.fit-image{
+  width: 100%;
+  object-fit: cover;
+}
+
 @media (min-width: 1400px) {
   .masthead {
     background-size: contain!important;
@@ -157,8 +167,8 @@
 }
 
 .program-section {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
   background: linear-gradient(to top, #c9ab74 100%, rgba(25, 25, 25, 0.9) 75%, rgba(25, 25, 25, 0.9) 75%);
 }
 
